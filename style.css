@@ -1,0 +1,245 @@
+/* John Charles Angeles - Profile Website */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f3f6fa;
+    color: #25374a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Header and headings */
+.site-header {
+    background: linear-gradient(120deg, #0c2845, #174e63);
+    color: #ffffff;
+    padding: 4.5rem 1.5rem 6.2rem;
+}
+
+.header-content {
+    max-width: 68rem;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+    color: #a8f1e8;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+}
+
+h1 {
+    margin: 0 0 0.7rem;
+    font-size: 3.4rem;
+    line-height: 1.15;
+}
+
+.tagline {
+    margin: 0;
+    color: #e2f1f4;
+    font-size: 1.12rem;
+}
+
+.tagline span {
+    padding: 0 0.3rem;
+}
+
+/* Main content and the box model: margin, padding, and border */
+.container {
+    position: relative;
+    max-width: 70.5rem;
+    margin: -3.1rem auto 3.5rem;
+    padding: 0 1.25rem;
+}
+
+.card {
+    margin-bottom: 1.5rem;
+    padding: 2.2rem;
+    border: 0.0625rem solid #dbe4ed;
+    border-radius: 1.15rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.7rem 1.8rem rgba(15, 39, 65, 0.07);
+}
+
+h2 {
+    margin: 0 0 1.2rem;
+    padding-left: 0.85rem;
+    border-left: 0.3rem solid #079e91;
+    color: #12304e;
+    font-size: 1.65rem;
+    line-height: 1.3;
+}
+
+h3 {
+    margin: 0 0 0.8rem;
+    color: #12304e;
+    font-size: 1.3rem;
+    line-height: 1.35;
+}
+
+p {
+    margin: 0;
+}
+
+/* Flexbox: bio on the left, circle profile photo on the right */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-placeholder {
+    display: flex;
+    flex: 0 0 17rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 15.5rem;
+    padding: 1.5rem;
+    border: 0.12rem solid #b8ded9;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #dcf4f1, #e8f0fa);
+    text-align: center;
+}
+
+.avatar-circle {
+    display: block;
+    width: 11rem;
+    height: 11rem;
+    border: 0.25rem solid #ffffff;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0.3rem 1.2rem rgba(15, 39, 65, 0.18);
+}
+
+/* Interests */
+.interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.interest-list li {
+    padding: 0.55rem 0.95rem;
+    border: 0.0625rem solid #b8ded9;
+    border-radius: 0.7rem;
+    background-color: #eaf7f5;
+    color: #20504e;
+    font-size: 0.96rem;
+}
+
+/* Featured project */
+.project {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.project-image {
+    flex: 0 0 45%;
+    min-width: 0;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.85rem;
+}
+
+.project-text {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Contact and footer */
+a {
+    color: #096b75;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    overflow-wrap: anywhere;
+}
+
+a:hover,
+a:focus-visible {
+    color: #064753;
+}
+
+.site-footer {
+    padding: 0 1.25rem 2.3rem;
+    color: #526579;
+    font-size: 0.88rem;
+    text-align: center;
+}
+
+/* Responsive layout*/
+@media (max-width: 768px) {
+    .site-header {
+        padding: 3.1rem 1.2rem 5.2rem;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .tagline span {
+        padding: 0 0.15rem;
+    }
+
+    .container {
+        margin-top: -2.5rem;
+        margin-bottom: 2.5rem;
+        padding: 0 0.85rem;
+    }
+
+    .card {
+        padding: 1.45rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .about,
+    .project {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.3rem;
+    }
+
+    .profile-placeholder,
+    .project-image {
+        flex: auto;
+        width: 100%;
+    }
+
+    .profile-placeholder {
+        min-height: 12.5rem;
+    }
+
+    .avatar-circle {
+        width: 9rem;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+}
